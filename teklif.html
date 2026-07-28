@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Blush Güzellik Merkezi — Web Sitesi Teklifi</title>
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{--gold:#bf9a5c;--gold-lt:#dcbc82;--sand:#f7ece7;--blush:#e2bdb2;--ink:#2e2523;--muted:#8a7a73;--line:#ece0da;--paper:#fdf9f7}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#ded1cb;color:var(--ink);font-family:'Jost',sans-serif;font-weight:300;line-height:1.65;padding:30px 16px}
+  .page{max-width:820px;margin:0 auto 26px;background:#fff;box-shadow:0 20px 60px -24px rgba(0,0,0,.34);border-top:5px solid var(--gold)}
+  .inner{padding:52px 58px}
+  h2,h3,h4{font-weight:600;line-height:1.16;letter-spacing:-.015em}
+  .pf{font-family:'Marcellus',serif;font-weight:400}
+  .grad{background:linear-gradient(100deg,var(--gold),#eccf9a 45%,var(--blush));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;border-bottom:1px solid var(--line);padding-bottom:26px}
+  .logo{display:flex;align-items:center;gap:12px}
+  .logo .mk{width:48px;height:48px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;flex:none;font-family:'Marcellus',serif;font-size:1.4rem;color:var(--gold)}
+  .logo b{font-family:'Marcellus',serif;font-weight:400;font-size:1.4rem;display:block;letter-spacing:.06em}
+  .logo i.s{font-style:normal;font-size:.52rem;letter-spacing:.26em;color:var(--muted);text-transform:uppercase;display:block;font-weight:500}
+  .doclabel{text-align:right;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  .doclabel b{display:block;font-weight:600;font-size:1.5rem;color:var(--gold);margin-top:5px;text-transform:none;letter-spacing:-.02em}
+  .meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:.8rem;color:var(--muted);margin:22px 0 30px}
+  .meta b{color:var(--ink);font-weight:600}
+  .eyebrow{font-size:.62rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  h2{font-size:1.95rem;margin:6px 0 14px}
+  h3{font-size:1.26rem;margin:0 0 6px}
+  p{margin-bottom:12px}
+  .lead{background:var(--sand);border-left:3px solid var(--gold);padding:20px 24px;margin:8px 0 26px;font-size:1rem}
+  .lead strong{font-weight:600}
+  .hi{background:var(--ink);color:#fff;border-radius:14px;padding:24px 28px;margin:18px 0}
+  .hi .hd{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-lt);font-weight:600;margin-bottom:9px}
+  .hi b{color:#fff;font-weight:600}
+  .hi p{color:rgba(255,255,255,.78);margin-bottom:9px}
+  .hi p:last-child{margin-bottom:0}
+  section.block{margin:30px 0}
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:10px 26px;margin-top:14px}
+  .feat div{display:flex;gap:10px;align-items:flex-start;font-size:.89rem}
+  .feat svg{width:16px;height:16px;color:var(--gold);flex:none;margin-top:5px}
+  .feat b{font-weight:600}
+  .demo{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;background:var(--ink);color:#fff;padding:18px 24px;border-radius:12px;margin-top:14px}
+  .demo a{color:var(--gold-lt);font-weight:600;word-break:break-all}
+  .demo small{color:#a3948d;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
+  .price-hero{background:var(--ink);color:#fff;padding:32px 34px;border-radius:14px;margin-top:16px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
+  .price-hero .col small{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-lt)}
+  .price-hero .col b{font-size:2.7rem;font-weight:600;display:block;line-height:1.1;letter-spacing:-.04em}
+  .price-hero .col span{font-size:.84rem;color:#a3948d}
+  .price-hero .divider{width:1px;background:rgba(220,188,130,.45)}
+  .roi{background:var(--sand);border:1px solid #eddfd8;border-radius:12px;padding:20px 24px;margin-top:16px;font-size:.92rem}
+  .roi b{color:var(--gold)}
+  table{width:100%;border-collapse:collapse;margin-top:16px;font-size:.88rem}
+  th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+  td.amt{text-align:right;font-size:1.22rem;white-space:nowrap;font-weight:600;letter-spacing:-.02em}
+  tr.total td{border-bottom:none;border-top:2px solid var(--gold);font-weight:600;padding-top:16px}
+  tr.total td.amt{color:var(--gold);font-size:1.5rem}
+  .rec{display:inline-block;background:var(--gold);color:#fff;font-size:.54rem;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:100px;font-weight:600;margin-left:8px;vertical-align:middle}
+  .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:16px}
+  .opt{border:1px solid var(--line);border-radius:14px;padding:22px 20px;background:var(--paper)}
+  .opt.hl{border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+  .opt .k{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .opt h4{font-size:1.12rem;margin:4px 0 10px}
+  .opt .pr{font-size:1.4rem;font-weight:600;letter-spacing:-.03em}
+  .opt .pr small{font-size:.76rem;color:var(--muted);font-weight:400}
+  .opt p{font-size:.79rem;color:var(--muted);margin-top:8px;margin-bottom:0}
+  ul.plain{list-style:none;margin-top:12px}
+  ul.plain li{display:flex;gap:11px;align-items:flex-start;font-size:.88rem;margin-bottom:9px}
+  ul.plain svg{width:15px;height:15px;color:var(--gold);flex:none;margin-top:5px}
+  ul.plain b{font-weight:600}
+  .terms{font-size:.79rem;color:var(--muted);background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin-top:14px}
+  .terms b{color:var(--ink);font-weight:600}
+  .cta{margin-top:30px;border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:18px;align-items:center}
+  .cta .sign b{font-size:1.2rem;display:block;font-weight:600}
+  .cta .sign span{font-size:.83rem;color:var(--muted)}
+  .btn{background:var(--gold);color:#fff;padding:14px 28px;border-radius:100px;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+  .foot{text-align:center;font-size:.7rem;color:var(--muted);margin-top:28px}
+  .noprint{max-width:820px;margin:0 auto 22px;text-align:center}
+  .noprint button{background:var(--ink);color:#fff;border:0;padding:12px 28px;border-radius:100px;font-family:'Jost',sans-serif;font-weight:500;font-size:.8rem;letter-spacing:.08em;cursor:pointer;text-transform:uppercase}
+  @media(max-width:680px){.inner{padding:34px 26px}.feat,.cards{grid-template-columns:1fr}.price-hero .divider{display:none}}
+  @media print{body{background:#fff;padding:0}.noprint{display:none}.page{box-shadow:none;margin:0}
+    .price-hero,.demo,.btn,.opt.hl,.rec,.hi,.roi,.lead{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+
+<div class="noprint"><button onclick="window.print()">⬇︎ PDF olarak kaydet / Yazdır</button></div>
+
+<div class="page"><div class="inner">
+
+  <div class="top">
+    <div class="logo">
+      <span class="mk">B</span>
+      <span><b>Blush</b><i class="s">Güzellik &amp; Bakım</i></span>
+    </div>
+    <div class="doclabel">Fiyat Teklifi<b>Web Sitesi</b></div>
+  </div>
+
+  <div class="meta">
+    <div><b>Hazırlayan:</b> MY BASKETO LTD · gozankaya@gmail.com</div>
+    <div><b>Hazırlanan:</b> Blush Güzellik Merkezi — Ziyapaşa / Adana</div>
+    <div><b>Tarih:</b> 28.07.2026 · <b>Geçerlilik:</b> 14 gün</div>
+  </div>
+
+  <span class="eyebrow">Merhaba Blush ekibi</span>
+  <div class="lead">
+    Blush Güzellik &amp; Bakım'ı inceledim — <strong>Ziyapaşa Bulvarı</strong> üzerinde, Özmumcur Apt.'ta,
+    tek çatı altında <strong>beş ayrı uzmanlık</strong>: lazer, cilt, tırnak, kaş/kirpik ve makyaj.
+    Instagram'daki kirpik lifting öncesi–sonrası kareleriniz ve tırnak işleriniz gerçekten iyi.
+    Ama <strong>Google'da yoksunuz</strong>: "Adana kirpik lifting", "Ziyapaşa cilt bakımı" veya
+    "Adana lazer epilasyon" yazan biri sizi bulamıyor.
+  </div>
+
+  <div class="hi">
+    <div class="hd">★ Asıl mesele burada</div>
+    <p>Bu aramaları tek tek denedim. Çıkan isimler hep aynı ve hepsi <b>sizinle aynı bulvarda</b>:
+    <b>Beauty Space</b> (Kurtuluş Mah.), <b>Zelal Güvercin Beauty</b>, <b>Ziyapaşa Beauty Center</b>,
+    <b>Kaliteli Yaşam Beauty</b>, ayrıca kendi alan adlarıyla <b>Gloria Beauty Center</b>,
+    <b>Melike Kul Beauty Center</b> ve <b>Safiye Bal Güzellik</b>. Bazılarının sitesi var,
+    bazıları randevu platformlarında listeli. <b>Blush hiçbirinde yok.</b></p>
+    <p>İkinci mesele: kampanyalarınız hikâyede yaşıyor. "Yaza hazırlanmanın şimdi tam zamanı"
+    paylaşımınız <b>24 saat sonra kayboluyor</b> — arayan müşteri bir gün sonra geldiğinde
+    ortada ne kampanya var, ne de bakabileceği bir adres.</p>
+    <p style="margin-bottom:0">Instagram'ı bırakın demiyorum. Öneri şu: <b>Instagram trafiği getirsin,
+    kendi siteniz o trafiği randevuya çevirsin</b> — ve Google'dan da yeni müşteri gelsin.</p>
+  </div>
+
+  <p style="font-size:.9rem;color:var(--muted);margin-top:14px">
+    Anlatmak yerine yaptım. Kendi fotoğraflarınızla, kendi hizmet başlıklarınızla —
+    ve içinde çalışan bir randevu sistemiyle.
+  </p>
+
+  <div class="demo">
+    <div><small>Canlı demo — şimdi inceleyin</small><br><a href="https://gracoins.github.io/blush/">gracoins.github.io/blush</a></div>
+    <div><small>Telefon &amp; bilgisayar uyumlu</small></div>
+  </div>
+
+  <section class="block">
+    <span class="eyebrow">Sitenin Kalbi</span>
+    <h2>3 adımlık <span class="pf grad">online randevu sistemi</span></h2>
+    <p style="font-size:.92rem">
+      Sitenin en önemli parçası bu. Müşteri gece 23:00'te siteye girse bile randevu talebini bırakabiliyor:
+    </p>
+    <ul class="plain">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>1. Adım —</b> Yaptırmak istediği işlemleri seçiyor (16 işlem listeli, birden fazla seçilebiliyor).</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>2. Adım —</b> Tarih ve saat seçiyor. Çalışma saatlerinizi bana iletin, sadece o saatler görünsün.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>3. Adım —</b> Ad ve telefonunu yazıyor, isterse not ekliyor ("4. lazer seansım olacak" gibi).</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Sonuç —</b> Talebin tamamı <b>düzenli bir mesaj halinde 0541 529 90 80'e WhatsApp'tan düşüyor</b>. Siz sadece "uygun" deyip teyit ediyorsunuz. Komisyon yok, aracı yok, üyelik yok.</li>
+    </ul>
+    <p style="font-size:.82rem;color:var(--muted);margin-top:10px">
+      Not: yayınlanmış bir fiyat listeniz olmadığı için hiçbir fiyat uydurmadım — şu an tüm işlemlerde
+      "Fiyat için danışınız" yazıyor. Listeyi iletirseniz aynı gün yerine yazılır.
+    </p>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Neler Dahil</span>
+    <h2>Siteniz neler sunuyor?</h2>
+    <div class="feat">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Logonuzun blush–altın tonlarına göre özel tasarım</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>3 adımlık online randevu sistemi</b></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Kalıcı kampanya bölümü</b> — "Yaza Hazırlığı" hikâyeden siteye taşındı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>6 hizmet kategorisi ayrı ayrı anlatımlı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Kirpik, cilt ve tırnak çalışmalarınız için vitrin bölümleri</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>"Randevunuzda ne oluyor?"</b> — 4 adımlık süreç anlatımı</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Galeri + Instagram bağlantısı (@blushguzellikadana)</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>Adres, iletişim &amp; Google Haritalar</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>WhatsApp butonu</b> — her sayfada sabit, tek dokunuşla mesaj</div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Yerel SEO</b> — "Adana kirpik lifting", "Ziyapaşa lazer epilasyon" aramaları için</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Yatırımınız</span>
+    <h2>Fiyatlandırma</h2>
+    <div class="price-hero">
+      <div class="col"><small>Kurulum · Tek Seferlik</small><b>25.000 ₺</b><span>Tasarım, içerik, randevu sistemi, alan adı, yayına alma</span></div>
+      <div class="divider"></div>
+      <div class="col"><small>Bakım · Aylık</small><b>3.000 ₺<small style="font-size:1rem;color:#a3948d;font-weight:400"> /ay</small></b><span>Alan adı, hosting, güncellemeler &amp; öncelikli destek</span></div>
+    </div>
+    <div class="roi">
+      Fiyatlarınızı yayınlamadığınız için kendi rakamınızla hesap yapamıyorum; o yüzden
+      <b>Ziyapaşa'daki bir rakibinizin herkese açık listesini</b> temel alayım: orada tüm vücut
+      lazer epilasyon paketi <b>5.000 – 8.000 ₺</b> arasında. Bu ölçüyle kurulum bedeli yaklaşık
+      <b>4 paket müşterisi</b>, aylık bakım ise <b>ayda tek bir paket müşterisinin yarısından az</b>.
+      Site size ayda <b>bir müşteri</b> kazandırsa bile bakım kendini fazlasıyla ödüyor.
+    </div>
+    <table>
+      <tr><th>Kalem</th><th>Açıklama</th><th style="text-align:right">Tutar</th></tr>
+      <tr><td>Web Sitesi Kurulumu</td><td>Özel tasarım, 6 hizmet kategorisi, vitrin bölümleri, süreç ve galeri bölümleri</td><td class="amt">16.000 ₺</td></tr>
+      <tr><td>Online Randevu Sistemi</td><td>3 adımlı seçim akışı, WhatsApp'a otomatik talep iletimi</td><td class="amt">6.000 ₺</td></tr>
+      <tr><td>İçerik Yazımı &amp; Fotoğraf Düzenleme</td><td>Tüm hizmet metinlerinin yazımı, Instagram görsellerinizin web için optimize edilmesi</td><td class="amt">3.000 ₺</td></tr>
+      <tr><td><b>Alan Adı</b></td><td><b>Sizin adınıza kayıtlı — blushguzellikadana.com şu an müsait, kontrol ettim</b></td><td class="amt">Dahil</td></tr>
+      <tr><td>Aylık Bakım Paketi</td><td>Alan adı + hosting + SSL, kampanya &amp; galeri güncellemeleri, teknik destek</td><td class="amt">3.000 ₺/ay</td></tr>
+      <tr class="total"><td>Başlangıç Ödemesi</td><td>Kurulum + ilk ay bakım</td><td class="amt">28.000 ₺</td></tr>
+    </table>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Aylık 3.000 ₺ ne kapsıyor?</span>
+    <h3 style="margin-top:8px">Sizin uğraşacağınız hiçbir şey kalmıyor</h3>
+    <ul class="plain">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Alan adı, hosting ve SSL yönetimi</b> — site 7/24 açık ve güvenli kalır, yenileme tarihlerini biz takip ederiz.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Kampanya güncellemeleri</b> — hikâyede paylaştığınız her kampanya siteye kalıcı olarak işlenir.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Galeri &amp; fiyat güncellemeleri</b> — yeni çalışmalarınızı WhatsApp'tan atın, aynı hafta sitede olsun.</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg><b>Randevu sistemi bakımı</b> — hizmet listesi ya da saatler değişirse forma işlenir, aksaklık olursa aynı gün çözülür.</li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <span class="eyebrow">Ödeme Seçenekleri</span>
+    <h2>Size uygun olanı seçin</h2>
+    <div class="cards">
+      <div class="opt">
+        <div class="k">Seçenek A</div><h4>Sadece Kurulum</h4>
+        <div class="pr">25.000 ₺</div>
+        <p>Site ve alan adı sizin olur. Güncelleme ve teknik yönetim size ait.</p>
+      </div>
+      <div class="opt hl">
+        <div class="k">Seçenek B <span class="rec">Önerilen</span></div><h4>Kurulum + Bakım</h4>
+        <div class="pr">25.000 ₺ <small>+ 3.000 ₺/ay</small></div>
+        <p>Her şeyi biz yönetiriz. Siz sadece randevularla ilgilenirsiniz.</p>
+      </div>
+      <div class="opt">
+        <div class="k">Seçenek C</div><h4>Yıllık Anlaşma</h4>
+        <div class="pr">25.000 ₺ <small>+ 30.000 ₺/yıl</small></div>
+        <p>Bakımı yıllık peşin ödeyin, <b>2 ay hediye</b> (36.000 yerine 30.000 ₺).</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="terms">
+    <b>Şartlar:</b> Kurulum bedelinin %50'si iş başlangıcında, %50'si yayına alımında ödenir. Alan adı
+    (<b>blushguzellikadana.com</b>) Blush Güzellik Merkezi adına kaydedilir ve bakım anlaşmasından bağımsız
+    olarak size aittir. Aylık bakım, sitenin yayına alındığı tarihte başlar ve aylık faturalandırılır;
+    30 gün önceden bildirimle sonlandırılabilir. Bu teklif <b>14 gün</b> geçerlidir. Hizmet,
+    MY BASKETO LTD (İngiltere) tarafından faturalandırılır; belirtilen tutarlar nettir.
+  </div>
+
+  <div class="cta">
+    <div class="sign"><b>MY BASKETO LTD</b><span>Web Tasarım &amp; Dijital Çözümler · gozankaya@gmail.com</span></div>
+    <div class="btn">Onaylamak için ulaşın →</div>
+  </div>
+
+  <div class="foot">Bu teklif Blush Güzellik Merkezi için özel olarak hazırlanmıştır · Canlı demo: gracoins.github.io/blush</div>
+
+</div></div>
+</body>
+</html>
